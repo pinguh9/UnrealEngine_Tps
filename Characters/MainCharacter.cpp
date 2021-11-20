@@ -40,8 +40,8 @@ AMainCharacter::AMainCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(GetRootComponent());
-	CameraBoom->TargetArmLength = 240.f;//Ä«¸Ş¶ó°¡ ¶³¾îÁ® ÀÖ´Â °Å¸®
-	CameraBoom->bUsePawnControlRotation = true;//ÄÜÆ®·Ñ·¯ ±â¹İÀ¸·Î ¾Ï È¸Àü
+	CameraBoom->TargetArmLength = 240.f;//ì¹´ë©”ë¼ê°€ ë–¨ì–´ì ¸ ìˆëŠ” ê±°ë¦¬
+	CameraBoom->bUsePawnControlRotation = true;//ì½˜íŠ¸ë¡¤ëŸ¬ ê¸°ë°˜ìœ¼ë¡œ ì•” íšŒì „
 	CameraBoom->SocketOffset = FVector(0.f, 60.f, 80.f);
 
 	//Set size for collision
@@ -160,7 +160,7 @@ void AMainCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	MainPlayerController = Cast<AMainPlayerController>(GetController());//ÄÁÆ®·Ñ·¯°¡ ¸ÕÀú ¼³Á¤µÇ¾î¾ßÇÔ
+	MainPlayerController = Cast<AMainPlayerController>(GetController());//ì»¨íŠ¸ë¡¤ëŸ¬ê°€ ë¨¼ì € ì„¤ì •ë˜ì–´ì•¼í•¨
 	//LoadGameNoSwitch();
 	InitializeAmmoMap();
 	InitializeInterpLocation();
