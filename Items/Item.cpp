@@ -347,7 +347,7 @@ void AItem::InitializeCustomDepth()
 
 void AItem::OnConstruction(const FTransform& Transform)
 {
-	//µ¥ÀÌÅÍ Å×ÀÌºí °æ·Î
+	//ÂµÂ¥Ã€ÃŒÃ…Ã Ã…Ã—Ã€ÃŒÂºÃ­ Â°Ã¦Â·Ã
 	FString RarityTablePath(TEXT("DataTable'/Game/DataTable/ItemRarityDataTable.ItemRarityDataTable'"));
 	UDataTable* RarityTableObject = Cast<UDataTable>(StaticLoadObject(UDataTable::StaticClass(), nullptr, *RarityTablePath));
 	if (RarityTableObject)
