@@ -37,7 +37,7 @@ void AWeapon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//¹«±â ¹ö¸± ½Ã À§¸¦ ÇâÇÑ Ã¤ ¶³¾îÁöµµ·Ï ÇÔ
+	//ë¬´ê¸° ë²„ë¦´ ì‹œ ìœ„ë¥¼ í–¥í•œ ì±„ ë–¨ì–´ì§€ë„ë¡ í•¨
 	if (GetItemState() == EItemState::EIS_Falling && bFalling)
 	{
 		const FRotator MeshRotation{ 0.f, GetItemMesh()->GetComponentRotation().Yaw, 0.f };
@@ -55,7 +55,7 @@ void AWeapon::StopFalling()
 
 void AWeapon::OnConstruction(const FTransform& Transform)
 {
-	//¹«±â Á¤º¸ Å×ÀÌºí¿¡¼­ ¹Ş¾Æ¿À±â
+	//ë¬´ê¸° ì •ë³´ í…Œì´ë¸”ì—ì„œ ë°›ì•„ì˜¤ê¸°
 	Super::OnConstruction(Transform);
 	const FString WeaponTablePath{ TEXT("DataTable'/Game/DataTable/WeaponDataTable.WeaponDataTable'") };
 	UDataTable* WeaponTableObject = Cast<UDataTable>(StaticLoadObject(UDataTable::StaticClass(), nullptr, *WeaponTablePath));
