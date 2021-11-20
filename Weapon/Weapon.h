@@ -9,20 +9,20 @@
 #include "WeaponType.h"
 #include "Weapon.generated.h"
 
-//¹«±â Á¤º¸ Å×ÀÌºí
+//ë¬´ê¸° ì •ë³´ í…Œì´ë¸”
 USTRUCT(BlueprintType)
 struct FWeaponDataTable : public FTableRowBase
 {
 	GENERATED_BODY()
 
-	//** Åº¾à Á¾·ù */
+	//** íƒ„ì•½ ì¢…ë¥˜ */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EAmmoType AmmoType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 WeaponAmmo;
 
-	//** ÅºÃ¢ Å©±â */
+	//** íƒ„ì°½ í¬ê¸° */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 MagazineCapacity;
 
@@ -53,7 +53,7 @@ struct FWeaponDataTable : public FTableRowBase
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int32 MaterialIndex;
 
-	//** ÅºÃ¢ º» ÀÌ¸§ */
+	//** íƒ„ì°½ ë³¸ ì´ë¦„ */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FName ClipBoneName;
 
@@ -63,7 +63,7 @@ struct FWeaponDataTable : public FTableRowBase
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<UAnimInstance> AnimBP;
 
-	//** ¿¬»çÀ² */
+	//** ì—°ì‚¬ìœ¨ */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float AutoFireRate;
 
@@ -106,10 +106,10 @@ protected:
 
 	virtual void OnConstruction(const FTransform& Transform) override;
 
-	//** ±ÇÃÑ »ç°İ ¾Ö´Ï¸ŞÀÌ¼Ç ¿ë*/
+	//** ê¶Œì´ ì‚¬ê²© ì• ë‹ˆë©”ì´ì…˜ ìš©*/
 	void FinishMovingSlide();
 
-	//** ±ÇÃÑ »ç°İ ¾Ö´Ï¸ŞÀÌ¼Ç ¿ë*/
+	//** ê¶Œì´ ì‚¬ê²© ì• ë‹ˆë©”ì´ì…˜ ìš©*/
 	void UpdateSlideDisplacement();
 
 private:
